@@ -40,3 +40,18 @@ git push
 ## Hotel tracking
 
 Use `assets/data/hotels-template.json` as a structured booking tracker.
+
+
+## Google Maps API key security
+
+This package has the Maps Embed API key already inserted in `index.html`.
+
+Before using this in a public GitHub Pages repo, restrict the key in Google Cloud Console:
+
+- Application restriction: HTTP referrers
+- Allowed referrers:
+  - `https://andybaxta.github.io/*`
+  - `http://localhost:*`
+- API restriction: Maps Embed API only
+
+Because this key has been shared in chat and may end up in Git history, the safest approach after testing is to rotate it and replace it with a newly restricted key.
