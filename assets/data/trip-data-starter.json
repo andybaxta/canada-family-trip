@@ -1,0 +1,20 @@
+{
+  "notes": "The v2 app currently embeds the full trip data inside index.html. This starter file is ready for the next refactor.",
+  "stops": [
+    "Vancouver",
+    "Seattle",
+    "Whistler",
+    "Revelstoke",
+    "Canmore / Banff",
+    "Jasper",
+    "Clearwater",
+    "Kelowna",
+    "Vancouver"
+  ],
+  "futureStructure": {
+    "days": [],
+    "bookings": [],
+    "budget": [],
+    "tasks": []
+  }
+}

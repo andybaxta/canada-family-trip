@@ -5,21 +5,25 @@
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Baxter Family Canada & Seattle Road Trip</title>
 <style>
-:root{--ink:#1b3a57;--pink:#ff0066;--green:#00a894;--cream:#f4f4f0;--slate:#0f172a;--muted:#64748b}
-*{box-sizing:border-box} body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--cream);color:var(--slate)}
-a{color:inherit} header{min-height:520px;color:white;background-image:linear-gradient(90deg,rgba(27,58,87,.95),rgba(27,58,87,.65),rgba(27,58,87,.15)),url('https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=2200&q=80');background-size:cover;background-position:center;display:flex;align-items:end}
-.wrap{max-width:1180px;margin:0 auto;padding:34px 22px;width:100%}.badge{display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.2);padding:8px 12px;border-radius:999px;margin:0 6px 8px 0;font-size:13px;font-weight:700}
-h1{font-size:clamp(38px,7vw,76px);line-height:.92;margin:18px 0 16px;font-weight:950;letter-spacing:-.05em;max-width:930px}.lead{font-size:20px;line-height:1.45;max-width:860px;color:rgba(255,255,255,.9)}
-.top-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:26px}.top-card{background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.16);border-radius:22px;padding:18px;backdrop-filter:blur(6px)}.top-card b{display:block;font-size:15px;color:#d1fae5}.top-card span{font-size:22px;font-weight:900}
-main{max-width:1180px;margin:auto;padding:30px 22px}.section-title{margin:36px 0 16px}.section-title p{color:var(--pink);font-weight:900;text-transform:uppercase;letter-spacing:.08em;font-size:13px;margin:0 0 6px}.section-title h2{font-size:32px;margin:0}
-.grid{display:grid;gap:16px}.two{grid-template-columns:1.15fr .85fr}.card{background:white;border-radius:24px;padding:22px;box-shadow:0 10px 28px rgba(15,23,42,.08)}
-.route-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.stop{background:#f8fafc;padding:14px;border-radius:16px;font-weight:800}.stop i{font-style:normal;display:inline-flex;width:30px;height:30px;border-radius:50%;align-items:center;justify-content:center;background:var(--ink);color:white;margin-right:8px}
+:root{--ink:#1b3a57;--pink:#ff0066;--green:#00a894;--cream:#f4f4f0;--slate:#0f172a;--muted:#64748b;--line:#e2e8f0}
+*{box-sizing:border-box} body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--cream);color:var(--slate)} a{color:inherit}
+header{min-height:480px;color:white;background-image:linear-gradient(90deg,rgba(27,58,87,.96),rgba(27,58,87,.68),rgba(27,58,87,.15)),url('https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=2200&q=80');background-size:cover;background-position:center;display:flex;align-items:end}
+.wrap{max-width:1220px;margin:0 auto;padding:34px 22px;width:100%}.badge{display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.2);padding:8px 12px;border-radius:999px;margin:0 6px 8px 0;font-size:13px;font-weight:800}
+h1{font-size:clamp(38px,7vw,76px);line-height:.92;margin:18px 0 16px;font-weight:950;letter-spacing:-.05em;max-width:980px}.lead{font-size:20px;line-height:1.45;max-width:900px;color:rgba(255,255,255,.9)}
+.top-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:26px}.top-card{background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.16);border-radius:22px;padding:18px;backdrop-filter:blur(6px)}.top-card b{display:block;font-size:15px;color:#d1fae5}.top-card span{font-size:22px;font-weight:950}
+main{max-width:1220px;margin:auto;padding:24px 22px 38px}.tabs{position:sticky;top:0;z-index:10;background:rgba(244,244,240,.92);backdrop-filter:blur(8px);padding:12px 0;display:flex;gap:8px;overflow:auto;border-bottom:1px solid rgba(15,23,42,.08)}
+.tab-btn{border:0;background:white;color:var(--ink);font-weight:900;border-radius:999px;padding:11px 16px;box-shadow:0 4px 14px rgba(15,23,42,.06);cursor:pointer;white-space:nowrap}.tab-btn.active{background:var(--ink);color:white}
+.tab{display:none}.tab.active{display:block}.section-title{margin:30px 0 16px}.section-title p{color:var(--pink);font-weight:950;text-transform:uppercase;letter-spacing:.08em;font-size:13px;margin:0 0 6px}.section-title h2{font-size:32px;margin:0}
+.grid{display:grid;gap:16px}.two{grid-template-columns:1.15fr .85fr}.three{grid-template-columns:repeat(3,1fr)}.card{background:white;border-radius:24px;padding:22px;box-shadow:0 10px 28px rgba(15,23,42,.08)}.note{background:#fff7ed;border:1px solid #fed7aa;color:#7c2d12;border-radius:22px;padding:18px;font-weight:800}
+.route-strip{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}.stop{background:#f8fafc;padding:14px;border-radius:16px;font-weight:900}.stop i{font-style:normal;display:inline-flex;width:30px;height:30px;border-radius:50%;align-items:center;justify-content:center;background:var(--ink);color:white;margin-right:8px}
+.full-map{width:100%;height:640px;border:0;border-radius:24px;box-shadow:0 12px 32px rgba(15,23,42,.12);background:#e0f2fe}.map-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}.pill-link{display:inline-block;border-radius:999px;background:#e0f2fe;color:#075985;text-decoration:none;padding:9px 12px;font-size:13px;font-weight:900}
 .budget{display:grid;gap:10px}.budget-row{display:grid;grid-template-columns:1fr auto;gap:4px 12px;background:#f8fafc;border-radius:14px;padding:12px}.budget-row b{font-size:15px}.budget-row strong{font-size:15px;color:var(--ink)}.budget-row small{grid-column:1/-1;color:var(--muted)}.total{background:var(--ink);color:white;border-radius:18px;padding:18px;margin-bottom:12px}.total strong{font-size:34px;display:block}
-.day-card{background:white;border-radius:28px;overflow:hidden;box-shadow:0 12px 32px rgba(15,23,42,.10);margin-bottom:22px}.photo{min-height:280px;background-size:cover;background-position:center;display:flex;align-items:end;gap:18px;padding:24px;color:white}.day-number{background:var(--pink);border-radius:18px;padding:14px 16px;font-weight:950;box-shadow:0 10px 24px rgba(0,0,0,.18)}.photo p{margin:0 0 6px;color:rgba(255,255,255,.82);font-weight:800}.photo h3{margin:0;font-size:clamp(26px,4vw,46px);line-height:1;font-weight:950}.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}.chips span{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:7px 10px;font-size:13px;font-weight:800}
-.day-body{display:grid;grid-template-columns:1fr 360px;gap:22px;padding:22px}.summary{font-size:18px;font-weight:800;color:var(--ink);margin-top:0}h4{margin:18px 0 8px;color:#111827}.targets span,.links a{display:inline-block;border-radius:999px;padding:8px 11px;margin:4px 5px 4px 0;font-weight:800;font-size:13px}.targets span{background:#f1f5f9;color:#334155}.links a{background:#e0f2fe;color:#075985;text-decoration:none}.links a:hover{background:#bae6fd;color:var(--pink)}
-.route-info{align-self:start}.drive-stat{background:#f8fafc;border-radius:18px;padding:16px;margin-bottom:12px;border-left:6px solid var(--green)}.drive-stat b{display:block;font-size:22px;color:var(--ink)}.drive-stat small{color:var(--muted);font-weight:800}.mini-map{display:block;text-decoration:none;color:var(--ink);font-weight:900}.map-frame{width:100%;height:220px;border:0;border-radius:22px;box-shadow:inset 0 0 0 1px rgba(15,23,42,.08);background:#e0f2fe}.mini-map span{display:block;margin-top:8px;text-align:right;color:var(--pink)}.route-info:empty{display:none}
-.hotel-box{background:#f8fafc;border-radius:18px;padding:16px;margin-top:14px}.hotel-box b{color:var(--ink)}.note{background:#fff7ed;border:1px solid #fed7aa;color:#7c2d12;border-radius:22px;padding:18px;font-weight:700}footer{background:var(--ink);color:white;margin-top:38px;padding:28px 22px}
-@media(max-width:900px){.top-grid,.two,.route-strip,.day-body{grid-template-columns:1fr}header{min-height:620px}.photo{align-items:start;flex-direction:column;justify-content:end}}
+.day-card{background:white;border-radius:28px;overflow:hidden;box-shadow:0 12px 32px rgba(15,23,42,.10);margin-bottom:22px}.photo{min-height:280px;background-size:cover;background-position:center;display:flex;align-items:end;gap:18px;padding:24px;color:white}.day-number{background:var(--pink);border-radius:18px;padding:14px 16px;font-weight:950;box-shadow:0 10px 24px rgba(0,0,0,.18)}.photo p{margin:0 0 6px;color:rgba(255,255,255,.82);font-weight:900}.photo h3{margin:0;font-size:clamp(26px,4vw,46px);line-height:1;font-weight:950}.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}.chips span{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:7px 10px;font-size:13px;font-weight:900}
+.day-body{display:grid;grid-template-columns:1fr 380px;gap:22px;padding:22px}.summary{font-size:18px;font-weight:900;color:var(--ink);margin-top:0}h4{margin:18px 0 8px;color:#111827}.targets span,.links a{display:inline-block;border-radius:999px;padding:8px 11px;margin:4px 5px 4px 0;font-weight:900;font-size:13px}.targets span{background:#f1f5f9;color:#334155}.links a{background:#e0f2fe;color:#075985;text-decoration:none}.links a:hover{background:#bae6fd;color:var(--pink)}
+.route-info{align-self:start}.drive-stat{background:#f8fafc;border-radius:18px;padding:16px;margin-bottom:12px;border-left:6px solid var(--green)}.drive-stat b{display:block;font-size:22px;color:var(--ink)}.drive-stat small{color:var(--muted);font-weight:900}.map-frame{width:100%;height:240px;border:0;border-radius:22px;box-shadow:inset 0 0 0 1px rgba(15,23,42,.08);background:#e0f2fe}
+.hotel-box{background:#f8fafc;border-radius:18px;padding:16px;margin-top:14px}.hotel-box b{color:var(--ink)}.status{display:inline-block;border-radius:999px;padding:6px 10px;font-weight:950;font-size:12px}.status.priority{background:#fee2e2;color:#991b1b}.status.shortlist{background:#dbeafe;color:#1d4ed8}.status.booked{background:#dcfce7;color:#166534}.status.optional{background:#f1f5f9;color:#334155}
+table{width:100%;border-collapse:separate;border-spacing:0 10px}th{text-align:left;color:var(--muted);font-size:13px;text-transform:uppercase;letter-spacing:.05em}td{background:white;padding:14px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);vertical-align:top}td:first-child{border-left:1px solid var(--line);border-radius:14px 0 0 14px;font-weight:900}td:last-child{border-right:1px solid var(--line);border-radius:0 14px 14px 0}.num{font-weight:950;color:var(--ink)}.checklist{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.task{background:white;border-radius:18px;padding:14px;box-shadow:0 6px 18px rgba(15,23,42,.06)}.task b{display:block;color:var(--ink)}footer{background:var(--ink);color:white;margin-top:38px;padding:28px 22px}
+@media(max-width:900px){.top-grid,.two,.three,.route-strip,.day-body,.checklist{grid-template-columns:1fr}header{min-height:620px}.photo{align-items:start;flex-direction:column;justify-content:end}.full-map{height:460px}table{font-size:13px}}
 </style>
 </head>
 <body>
@@ -27,7 +31,7 @@ main{max-width:1180px;margin:auto;padding:30px 22px}.section-title{margin:36px 0
   <div class="wrap">
     <span class="badge">Summer 2026</span><span class="badge">Canada + Seattle</span><span class="badge">GitHub Pages web app</span>
     <h1>Baxter Family Canada & Seattle Road Trip</h1>
-    <p class="lead">Family-shareable planning board for a Vancouver loop: Seattle, Whistler, Revelstoke, Canmore/Banff, Jasper, Clearwater, Okanagan and back to Vancouver. Target budget: £12k–£15k.</p>
+    <p class="lead">Family-shareable planning board for the full Vancouver loop: Seattle, Whistler, Revelstoke, Canmore/Banff, Jasper, Clearwater, Okanagan and back to Vancouver.</p>
     <div class="top-grid">
       <div class="top-card"><b>Flight plan</b><span>UK ⇄ Vancouver</span><p>Benchmark open-jaw before booking.</p></div>
       <div class="top-card"><b>Transport</b><span>SUV / minivan</span><p>Unlimited mileage + US border approval.</p></div>
@@ -36,79 +40,200 @@ main{max-width:1180px;margin:auto;padding:30px 22px}.section-title{margin:36px 0
     </div>
   </div>
 </header>
+
 <main>
-  <section class="grid two">
-    <div class="card">
-      <div class="section-title"><p>Route concept</p><h2>The loop at a glance</h2></div>
-      <div class="route-strip">
-        <div class="stop"><i>1</i>Vancouver</div><div class="stop"><i>2</i>Seattle</div><div class="stop"><i>3</i>Whistler</div><div class="stop"><i>4</i>Revelstoke</div>
-        <div class="stop"><i>5</i>Canmore / Banff</div><div class="stop"><i>6</i>Jasper</div><div class="stop"><i>7</i>Clearwater</div><div class="stop"><i>8</i>Kelowna</div><div class="stop"><i>9</i>Vancouver</div>
+  <nav class="tabs" aria-label="Trip app navigation">
+    <button class="tab-btn active" data-tab="overview">Overview</button>
+    <button class="tab-btn" data-tab="route">Whole trip map</button>
+    <button class="tab-btn" data-tab="itinerary">Day by day</button>
+    <button class="tab-btn" data-tab="bookings">Bookings</button>
+    <button class="tab-btn" data-tab="budget">Budget</button>
+    <button class="tab-btn" data-tab="tasks">To book</button>
+  </nav>
+
+  <section id="overview" class="tab active">
+    <div class="grid two">
+      <div class="card">
+        <div class="section-title"><p>Route concept</p><h2>The loop at a glance</h2></div>
+        <div class="route-strip" id="routeStrip"></div>
+        <p class="note" style="margin-top:16px">The full-trip route map has its own tab. Daily route cards still show each driving leg with a Google Maps embed.</p>
       </div>
-      <p class="note" style="margin-top:16px">The app is a static GitHub Pages site. Photos are external Unsplash links; route maps open in Google Maps. You can later add a Google Maps Embed API key for true embedded route maps.</p>
-    </div>
-    <div class="card">
-      <div class="section-title"><p>Budget</p><h2>Aligned estimate</h2></div>
-      <div class="total"><span>Working midpoint</span><strong>£15.2k</strong><span>Planning range: £12.5k–£17.2k</span></div>
-      <div class="budget">
-        <div class="budget-row"><b>Flights</b><strong>£3,300</strong><small>Target range £2,800–£3,800</small></div>
-        <div class="budget-row"><b>Car hire</b><strong>£1,400</strong><small>Target range £1,000–£1,800</small></div>
-        <div class="budget-row"><b>Accommodation</b><strong>£6,200</strong><small>Target range £5,400–£6,900</small></div>
-        <div class="budget-row"><b>Food</b><strong>£2,200</strong><small>Target range £1,900–£2,500</small></div>
-        <div class="budget-row"><b>Activities</b><strong>£1,200</strong><small>Target range £900–£1,500</small></div>
-        <div class="budget-row"><b>Fuel / parking / misc</b><strong>£900</strong><small>Target range £700–£1,100</small></div>
+      <div class="card">
+        <div class="section-title"><p>Current planning state</p><h2>What matters next</h2></div>
+        <div class="checklist" id="quickTasks"></div>
       </div>
     </div>
   </section>
 
-  <div class="section-title"><p>Day by day</p><h2>Starter itinerary</h2></div>
-  <section id="itinerary"></section>
+  <section id="route" class="tab">
+    <div class="section-title"><p>Whole trip</p><h2>Entire route map</h2></div>
+    <div class="card">
+      <iframe id="wholeTripMap" class="full-map" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="map-actions">
+        <a id="wholeTripGoogleLink" class="pill-link" target="_blank" rel="noreferrer">Open full route in Google Maps ↗</a>
+        <span class="pill-link">Approx. full loop: 2,350–2,550 miles / 3,800–4,100 km</span>
+        <span class="pill-link">Hardest leg now split by Clearwater</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="itinerary" class="tab">
+    <div class="section-title"><p>Day by day</p><h2>Daily itinerary cards</h2></div>
+    <div id="dayCards"></div>
+  </section>
+
+  <section id="bookings" class="tab">
+    <div class="section-title"><p>Control centre</p><h2>Bookings and accommodation shortlist</h2></div>
+    <div class="card"><div style="overflow:auto"><table id="bookingsTable"></table></div></div>
+  </section>
+
+  <section id="budget" class="tab">
+    <div class="section-title"><p>Money</p><h2>Planned vs booked budget tracker</h2></div>
+    <div class="grid two">
+      <div class="card">
+        <div class="total"><span>Working midpoint</span><strong id="budgetMidpoint">£15.2k</strong><span id="budgetRange">Planning range: £12.5k–£17.2k</span></div>
+        <div class="budget" id="budgetRows"></div>
+      </div>
+      <div class="card">
+        <div class="section-title" style="margin-top:0"><p>Budget levers</p><h2>How to keep it under control</h2></div>
+        <div class="checklist">
+          <div class="task"><b>Canmore condo</b><span>Kitchen/laundry saves money and sanity.</span></div>
+          <div class="task"><b>Jasper early</b><span>Book before options disappear.</span></div>
+          <div class="task"><b>Seattle simple</b><span>Two nights only, don’t overpay.</span></div>
+          <div class="task"><b>Loop rental</b><span>Avoids cross-country one-way drop fees.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tasks" class="tab">
+    <div class="section-title"><p>Action list</p><h2>Things to book / verify</h2></div>
+    <div class="checklist" id="taskBoard"></div>
+  </section>
 </main>
+
 <footer><div class="wrap"><b>Next decisions:</b> price flights, then lock Canmore/Jasper accommodation, then book car hire with written Canada/US border approval.</div></footer>
 
 <script>
-const GOOGLE_MAPS_API_KEY = "AIzaSyAQI2cXCUCmGiJQpmkefVRjHZPm41KkYys"; // optional: add key for embedded maps
+const GOOGLE_MAPS_API_KEY = "AIzaSyAQI2cXCUCmGiJQpmkefVRjHZPm41KkYys";
 
-const days = [
- {day:1,date:"Sat 18 Jul",title:"Arrive in Vancouver",base:"Vancouver",weather:"14–23°C",time:"Flight day",img:"https://images.unsplash.com/photo-1559511260-66a654ae982a?auto=format&fit=crop&w=1800&q=80",summary:"Fly UK to Vancouver, recover, waterfront dinner.",targets:["Coal Harbour","Canada Place","Easy dinner"],hotel:{name:"TBC",area:"Downtown / Coal Harbour / Yaletown"},links:[["Flights","https://www.google.com/travel/flights"],["Vancouver tourism","https://www.destinationvancouver.com/"],["Hotels","https://www.booking.com/city/ca/vancouver.html"]]},
- {day:2,date:"Sun 19 Jul",title:"Vancouver highlights",base:"Vancouver",weather:"14–23°C",time:"Local day",img:"https://images.unsplash.com/photo-1560813962-ff3d8fcf59ba?auto=format&fit=crop&w=1800&q=80",summary:"Stanley Park, Granville Island, optional Capilano.",targets:["Stanley Park","Granville Island","Capilano Suspension Bridge"],hotel:{name:"Same Vancouver base",area:"Downtown"},links:[["Stanley Park","https://vancouver.ca/parks-recreation-culture/stanley-park.aspx"],["Granville Island","https://granvilleisland.com/"],["Capilano","https://www.capbridge.com/"]]},
- {day:3,date:"Mon 20 Jul",title:"Drive to Seattle",base:"Seattle",weather:"14–26°C",time:"3–4 hrs + border",miles:143,km:230,origin:"Vancouver, BC",dest:"Seattle, WA",img:"https://images.unsplash.com/photo-1502175353174-a7a70e73b362?auto=format&fit=crop&w=1800&q=80",summary:"Cross into the US, Pike Place Market, waterfront.",targets:["Pike Place Market","Seattle Waterfront","Great Wheel"],hotel:{name:"TBC",area:"Seattle Center / South Lake Union / Downtown"},links:[["Pike Place","https://www.pikeplacemarket.org/"],["Hotels","https://www.booking.com/city/us/seattle.html"]]},
- {day:4,date:"Tue 21 Jul",title:"Seattle in one proper day",base:"Seattle",weather:"14–26°C",time:"Local day",img:"https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80",summary:"Space Needle, MoPOP, Mariners if dates work.",targets:["Space Needle","MoPOP","Mariners"],hotel:{name:"Same Seattle base",area:"Seattle"},links:[["Space Needle","https://www.spaceneedle.com/"],["MoPOP","https://www.mopop.org/"],["Mariners tickets","https://www.mlb.com/mariners/tickets"]]},
- {day:5,date:"Wed 22 Jul",title:"Seattle to Whistler",base:"Whistler",weather:"11–24°C",time:"5–6 hrs + border",miles:217,km:350,origin:"Seattle, WA",dest:"Whistler, BC",img:"https://images.unsplash.com/photo-1605540436563-5bca919ae766?auto=format&fit=crop&w=1800&q=80",summary:"Cross back into Canada and head up the Sea-to-Sky corridor.",targets:["Shannon Falls","Squamish","Whistler Village"],hotel:{name:"TBC",area:"Whistler Village / Creekside"},links:[["Whistler","https://www.whistler.com/"],["Sea to Sky Gondola","https://www.seatoskygondola.com/"]]},
- {day:6,date:"Thu 23 Jul",title:"Whistler mountain day",base:"Whistler",weather:"11–24°C",time:"Local day",img:"https://images.unsplash.com/photo-1573087264339-f1f6b7b66f64?auto=format&fit=crop&w=1800&q=80",summary:"Peak 2 Peak, Lost Lake, trails and laundry reset.",targets:["Peak 2 Peak","Lost Lake","Whistler Village"],hotel:{name:"Same Whistler base",area:"Whistler"},links:[["Peak 2 Peak","https://www.whistlerblackcomb.com/explore-the-resort/activities-and-events/peak-2-peak-gondola.aspx"]]},
- {day:7,date:"Fri 24 Jul",title:"Whistler to Revelstoke",base:"Revelstoke",weather:"12–27°C",time:"6–7 hrs",miles:323,km:520,origin:"Whistler, BC",dest:"Revelstoke, BC",img:"https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80",summary:"Big BC road day through the interior.",targets:["Kamloops stop","Revelstoke town","Evening walk"],hotel:{name:"TBC",area:"Functional transit stop"},links:[["Revelstoke","https://seerevelstoke.com/"],["Hotels","https://www.booking.com/city/ca/revelstoke.html"]]},
- {day:8,date:"Sat 25 Jul",title:"Revelstoke to Canmore",base:"Canmore",weather:"7–22°C",time:"4.5–5 hrs",miles:242,km:390,origin:"Revelstoke, BC",dest:"Canmore, AB",img:"https://images.unsplash.com/photo-1500048993953-d23a436266cf?auto=format&fit=crop&w=1800&q=80",summary:"Rogers Pass, Yoho, Emerald Lake, then Canmore.",targets:["Rogers Pass","Emerald Lake","Takakkaw Falls"],hotel:{name:"TBC - priority",area:"Canmore condo / apartment"},links:[["Yoho National Park","https://parks.canada.ca/pn-np/bc/yoho"],["Canmore stays","https://www.booking.com/city/ca/canmore.html"]]},
- {day:9,date:"Sun 26 Jul",title:"Lake Louise & Moraine Lake",base:"Canmore",weather:"4–20°C",time:"1 hr each way + shuttle",miles:50,km:80,origin:"Canmore, AB",dest:"Lake Louise, AB",img:"https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1800&q=80",summary:"Iconic lake day using Parks Canada shuttle.",targets:["Lake Louise","Moraine Lake","Bow Valley"],hotel:{name:"Same Canmore base",area:"Canmore"},links:[["Parks Canada shuttle","https://parks.canada.ca/pn-np/ab/banff/visit/parkbus/louise"],["Reservations","https://reservation.pc.gc.ca/"]]},
- {day:10,date:"Mon 27 Jul",title:"Banff day",base:"Canmore",weather:"7–22°C",time:"25 mins each way",miles:16,km:25,origin:"Canmore, AB",dest:"Banff, AB",img:"https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1800&q=80",summary:"Banff town, Johnston Canyon, Lake Minnewanka or gondola.",targets:["Johnston Canyon","Banff Avenue","Lake Minnewanka"],hotel:{name:"Same Canmore base",area:"Canmore"},links:[["Banff Gondola","https://www.banffjaspercollection.com/attractions/banff-gondola/"],["Banff National Park","https://parks.canada.ca/pn-np/ab/banff"]]},
- {day:11,date:"Tue 28 Jul",title:"Icefields Parkway to Jasper",base:"Jasper",weather:"8–23°C",time:"Full scenic day",miles:196,km:315,origin:"Canmore, AB",dest:"Jasper, AB",img:"https://images.unsplash.com/photo-1517824806704-9040b037703b?auto=format&fit=crop&w=1800&q=80",summary:"Peyto Lake, Columbia Icefield, Athabasca Glacier.",targets:["Peyto Lake","Columbia Icefield","Athabasca Glacier"],hotel:{name:"TBC - priority",area:"Jasper lodge / cabins"},links:[["Columbia Icefield","https://www.banffjaspercollection.com/attractions/columbia-icefield/"],["Jasper stays","https://www.booking.com/city/ca/jasper.html"]]},
- {day:12,date:"Wed 29 Jul",title:"Jasper wilderness",base:"Jasper",weather:"8–23°C",time:"Local day",img:"https://images.unsplash.com/photo-1517824806704-9040b037703b?auto=format&fit=crop&w=1800&q=80",summary:"Maligne Canyon, Maligne Lake, wildlife drive.",targets:["Maligne Lake","Maligne Canyon","Jasper town"],hotel:{name:"Same Jasper base",area:"Jasper"},links:[["Jasper National Park","https://parks.canada.ca/pn-np/ab/jasper"],["Maligne Lake cruise","https://www.banffjaspercollection.com/attractions/maligne-lake-cruise/"]]},
- {day:13,date:"Thu 30 Jul",title:"Jasper to Clearwater",base:"Clearwater / Kamloops",weather:"12–28°C",time:"4–5 hrs",miles:200,km:320,origin:"Jasper, AB",dest:"Clearwater, BC",img:"https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1800&q=80",summary:"New stopover to split the heavy Jasper to Kelowna mileage.",targets:["Wells Gray","Helmcken Falls","Easy motel night"],hotel:{name:"TBC",area:"Clearwater preferred; Kamloops backup"},links:[["Google route","https://www.google.com/maps/dir/Jasper,+AB/Clearwater,+BC"],["Wells Gray","https://bcparks.ca/wells-gray-park/"]]},
- {day:14,date:"Fri 31 Jul",title:"Clearwater to Kelowna",base:"Kelowna / Okanagan",weather:"14–29°C",time:"4–4.5 hrs",miles:205,km:330,origin:"Clearwater, BC",dest:"Kelowna, BC",img:"https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1800&q=80",summary:"Arrive in lake country for pool/lake reset.",targets:["Okanagan Lake","Kelowna waterfront","Pool time"],hotel:{name:"TBC",area:"Lakefront / pool resort"},links:[["Tourism Kelowna","https://www.tourismkelowna.com/"],["Kelowna stays","https://www.booking.com/city/ca/kelowna.html"]]},
- {day:15,date:"Sat 1 Aug",title:"Okanagan recovery day",base:"Kelowna / Okanagan",weather:"14–29°C",time:"Local day",img:"https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1800&q=80",summary:"Lake, beach, optional winery lunch, relaxed evening.",targets:["Okanagan Lake","Mission Creek","Winery lunch"],hotel:{name:"Same Kelowna base",area:"Kelowna"},links:[["Beaches & parks","https://www.tourismkelowna.com/things-to-do/beaches-parks/"]]},
- {day:16,date:"Sun 2 Aug",title:"Kelowna to Vancouver",base:"Vancouver / airport",weather:"14–23°C",time:"4–5 hrs",miles:242,km:390,origin:"Kelowna, BC",dest:"Vancouver, BC",img:"https://images.unsplash.com/photo-1559511260-66a654ae982a?auto=format&fit=crop&w=1800&q=80",summary:"Return to Vancouver, final dinner, pack/reset.",targets:["Vancouver final night","Airport hotel","Pack and reset"],hotel:{name:"TBC",area:"Airport hotel if early flight"},links:[["YVR airport","https://www.yvr.ca/"],["Airport hotels","https://www.booking.com/airport/ca/yvr.html"]]},
- {day:17,date:"Mon 3 Aug",title:"Fly home",base:"In flight / home",weather:"14–23°C",time:"Flight day",img:"https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1800&q=80",summary:"Return car if needed and fly Vancouver to UK.",targets:["YVR","Duty free","Sleep"],hotel:{name:"Home",area:""},links:[["Flights","https://www.google.com/travel/flights"],["YVR departures","https://www.yvr.ca/en/passengers/flights/departing-flights"]]}
+const stops = ["Vancouver", "Seattle", "Whistler", "Revelstoke", "Canmore / Banff", "Jasper", "Clearwater", "Kelowna", "Vancouver"];
+
+const budget = [
+  { item:"Flights", planned:3300, range:"£2,800–£3,800", booked:0, note:"London ⇄ Vancouver return; benchmark open-jaw" },
+  { item:"Car hire", planned:1400, range:"£1,000–£1,800", booked:0, note:"Full-size SUV/minivan, loop rental" },
+  { item:"Accommodation", planned:6200, range:"£5,400–£6,900", booked:0, note:"Canmore/Jasper are priority" },
+  { item:"Food", planned:2200, range:"£1,900–£2,500", booked:0, note:"Apartment breakfasts + selected dinners out" },
+  { item:"Activities", planned:1200, range:"£900–£1,500", booked:0, note:"Shuttles, gondolas, baseball, museums" },
+  { item:"Fuel / parking / misc", planned:900, range:"£700–£1,100", booked:0, note:"City parking and fuel contingency" }
 ];
 
+const tasks = [
+  { title:"Check Vancouver return flights", status:"Priority", detail:"Compare Heathrow, Birmingham and Manchester. Also compare open-jaw Calgary/Vancouver." },
+  { title:"Book Canmore base", status:"Priority", detail:"Stoneridge / Falcon Crest / Solara or comparable condo." },
+  { title:"Book Jasper accommodation", status:"Priority", detail:"Pine Bungalows / Tekarra / Becker’s; July supply is tight." },
+  { title:"Confirm car hire", status:"Priority", detail:"Full-size SUV/minivan, unlimited mileage, written Canada/US border permission." },
+  { title:"Book Parks Canada shuttle", status:"To book", detail:"Lake Louise and Moraine Lake shuttle day." },
+  { title:"Check Mariners tickets", status:"Optional", detail:"Only if home game aligns with Seattle night." },
+  { title:"Confirm dog kennels", status:"Personal", detail:"Book around final travel dates once flights are fixed." },
+  { title:"Travel insurance", status:"To book", detail:"Include USA and Canada, car excess, medical, cancellation." }
+];
+
+const days = [
+ {day:1,date:"Sat 18 Jul",title:"Arrive in Vancouver",base:"Vancouver",weather:"14–23°C",time:"Flight day",img:"https://images.unsplash.com/photo-1559511260-66a654ae982a?auto=format&fit=crop&w=1800&q=80",summary:"Fly UK to Vancouver, recover, waterfront dinner.",targets:["Coal Harbour","Canada Place","Easy dinner"],hotel:{name:"TBC",preferred:"Blue Horizon / Pinnacle Harbourfront / Fairmont Waterfront",area:"Downtown / Coal Harbour / Yaletown",status:"Shortlist",nights:2,cost:"£700–£900"},links:[["Flights","https://www.google.com/travel/flights"],["Vancouver tourism","https://www.destinationvancouver.com/"],["Hotels","https://www.booking.com/city/ca/vancouver.html"]]},
+ {day:2,date:"Sun 19 Jul",title:"Vancouver highlights",base:"Vancouver",weather:"14–23°C",time:"Local day",img:"https://images.unsplash.com/photo-1560813962-ff3d8fcf59ba?auto=format&fit=crop&w=1800&q=80",summary:"Stanley Park, Granville Island, optional Capilano.",targets:["Stanley Park","Granville Island","Capilano Suspension Bridge"],hotel:{name:"Same Vancouver base",preferred:"",area:"Downtown",status:"Shortlist",nights:"",cost:""},links:[["Stanley Park","https://vancouver.ca/parks-recreation-culture/stanley-park.aspx"],["Granville Island","https://granvilleisland.com/"],["Capilano","https://www.capbridge.com/"]]},
+ {day:3,date:"Mon 20 Jul",title:"Drive to Seattle",base:"Seattle",weather:"14–26°C",time:"3–4 hrs + border",miles:143,km:230,origin:"Vancouver, BC",dest:"Seattle, WA",img:"https://images.unsplash.com/photo-1502175353174-a7a70e73b362?auto=format&fit=crop&w=1800&q=80",summary:"Cross into the US, Pike Place Market, waterfront.",targets:["Pike Place Market","Seattle Waterfront","Great Wheel"],hotel:{name:"TBC",preferred:"Hyatt House Seattle Downtown / Staypineapple Maxwell / Residence Inn",area:"Seattle Center / South Lake Union / Downtown",status:"Shortlist",nights:2,cost:"£550–£700"},links:[["Pike Place","https://www.pikeplacemarket.org/"],["Hotels","https://www.booking.com/city/us/seattle.html"]]},
+ {day:4,date:"Tue 21 Jul",title:"Seattle in one proper day",base:"Seattle",weather:"14–26°C",time:"Local day",img:"https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80",summary:"Space Needle, MoPOP, Mariners if dates work.",targets:["Space Needle","MoPOP","Mariners"],hotel:{name:"Same Seattle base",preferred:"",area:"Seattle",status:"Shortlist",nights:"",cost:""},links:[["Space Needle","https://www.spaceneedle.com/"],["MoPOP","https://www.mopop.org/"],["Mariners tickets","https://www.mlb.com/mariners/tickets"]]},
+ {day:5,date:"Wed 22 Jul",title:"Seattle to Whistler",base:"Whistler",weather:"11–24°C",time:"5–6 hrs + border",miles:217,km:350,origin:"Seattle, WA",dest:"Whistler, BC",img:"https://images.unsplash.com/photo-1605540436563-5bca919ae766?auto=format&fit=crop&w=1800&q=80",summary:"Cross back into Canada and head up the Sea-to-Sky corridor.",targets:["Shannon Falls","Squamish","Whistler Village"],hotel:{name:"TBC",preferred:"Pan Pacific Whistler Village Centre / Summit Lodge / VRBO",area:"Whistler Village / Creekside",status:"Shortlist",nights:2,cost:"£700–£900"},links:[["Whistler","https://www.whistler.com/"],["Sea to Sky Gondola","https://www.seatoskygondola.com/"]]},
+ {day:6,date:"Thu 23 Jul",title:"Whistler mountain day",base:"Whistler",weather:"11–24°C",time:"Local day",img:"https://images.unsplash.com/photo-1573087264339-f1f6b7b66f64?auto=format&fit=crop&w=1800&q=80",summary:"Peak 2 Peak, Lost Lake, trails and laundry reset.",targets:["Peak 2 Peak","Lost Lake","Whistler Village"],hotel:{name:"Same Whistler base",preferred:"",area:"Whistler",status:"Shortlist",nights:"",cost:""},links:[["Peak 2 Peak","https://www.whistlerblackcomb.com/explore-the-resort/activities-and-events/peak-2-peak-gondola.aspx"]]},
+ {day:7,date:"Fri 24 Jul",title:"Whistler to Revelstoke",base:"Revelstoke",weather:"12–27°C",time:"6–7 hrs",miles:323,km:520,origin:"Whistler, BC",dest:"Revelstoke, BC",img:"https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80",summary:"Big BC road day through the interior.",targets:["Kamloops stop","Revelstoke town","Evening walk"],hotel:{name:"TBC",preferred:"Coast Hillcrest / Sutton Place",area:"Functional transit stop",status:"Transit",nights:1,cost:"£180–£250"},links:[["Revelstoke","https://seerevelstoke.com/"],["Hotels","https://www.booking.com/city/ca/revelstoke.html"]]},
+ {day:8,date:"Sat 25 Jul",title:"Revelstoke to Canmore",base:"Canmore",weather:"7–22°C",time:"4.5–5 hrs",miles:242,km:390,origin:"Revelstoke, BC",dest:"Canmore, AB",img:"https://images.unsplash.com/photo-1500048993953-d23a436266cf?auto=format&fit=crop&w=1800&q=80",summary:"Rogers Pass, Yoho, Emerald Lake, then Canmore.",targets:["Rogers Pass","Emerald Lake","Takakkaw Falls"],hotel:{name:"TBC - priority",preferred:"Stoneridge Mountain Resort / Falcon Crest Lodge / Solara",area:"Canmore condo / apartment",status:"Priority",nights:3,cost:"£1,200–£1,450"},links:[["Yoho National Park","https://parks.canada.ca/pn-np/bc/yoho"],["Canmore stays","https://www.booking.com/city/ca/canmore.html"]]},
+ {day:9,date:"Sun 26 Jul",title:"Lake Louise & Moraine Lake",base:"Canmore",weather:"4–20°C",time:"1 hr each way + shuttle",miles:50,km:80,origin:"Canmore, AB",dest:"Lake Louise, AB",img:"https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1800&q=80",summary:"Iconic lake day using Parks Canada shuttle.",targets:["Lake Louise","Moraine Lake","Bow Valley"],hotel:{name:"Same Canmore base",preferred:"",area:"Canmore",status:"Priority",nights:"",cost:""},links:[["Parks Canada shuttle","https://parks.canada.ca/pn-np/ab/banff/visit/parkbus/louise"],["Reservations","https://reservation.pc.gc.ca/"]]},
+ {day:10,date:"Mon 27 Jul",title:"Banff day",base:"Canmore",weather:"7–22°C",time:"25 mins each way",miles:16,km:25,origin:"Canmore, AB",dest:"Banff, AB",img:"https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1800&q=80",summary:"Banff town, Johnston Canyon, Lake Minnewanka or gondola.",targets:["Johnston Canyon","Banff Avenue","Lake Minnewanka"],hotel:{name:"Same Canmore base",preferred:"",area:"Canmore",status:"Priority",nights:"",cost:""},links:[["Banff Gondola","https://www.banffjaspercollection.com/attractions/banff-gondola/"],["Banff National Park","https://parks.canada.ca/pn-np/ab/banff"]]},
+ {day:11,date:"Tue 28 Jul",title:"Icefields Parkway to Jasper",base:"Jasper",weather:"8–23°C",time:"Full scenic day",miles:196,km:315,origin:"Canmore, AB",dest:"Jasper, AB",img:"https://images.unsplash.com/photo-1517824806704-9040b037703b?auto=format&fit=crop&w=1800&q=80",summary:"Peyto Lake, Columbia Icefield, Athabasca Glacier.",targets:["Peyto Lake","Columbia Icefield","Athabasca Glacier"],hotel:{name:"TBC - priority",preferred:"Pine Bungalows / Tekarra Lodge / Becker’s Chalets",area:"Jasper lodge / cabins",status:"Priority",nights:2,cost:"£900–£1,100"},links:[["Columbia Icefield","https://www.banffjaspercollection.com/attractions/columbia-icefield/"],["Jasper stays","https://www.booking.com/city/ca/jasper.html"]]},
+ {day:12,date:"Wed 29 Jul",title:"Jasper wilderness",base:"Jasper",weather:"8–23°C",time:"Local day",img:"https://images.unsplash.com/photo-1517824806704-9040b037703b?auto=format&fit=crop&w=1800&q=80",summary:"Maligne Canyon, Maligne Lake, wildlife drive.",targets:["Maligne Lake","Maligne Canyon","Jasper town"],hotel:{name:"Same Jasper base",preferred:"",area:"Jasper",status:"Priority",nights:"",cost:""},links:[["Jasper National Park","https://parks.canada.ca/pn-np/ab/jasper"],["Maligne Lake cruise","https://www.banffjaspercollection.com/attractions/maligne-lake-cruise/"]]},
+ {day:13,date:"Thu 30 Jul",title:"Jasper to Clearwater",base:"Clearwater / Kamloops",weather:"12–28°C",time:"4–5 hrs",miles:200,km:320,origin:"Jasper, AB",dest:"Clearwater, BC",img:"https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1800&q=80",summary:"New stopover to split the heavy Jasper to Kelowna mileage.",targets:["Wells Gray","Helmcken Falls","Easy motel night"],hotel:{name:"TBC",preferred:"Best Western Gateway to the Falls / Clearwater lodge / Kamloops backup",area:"Clearwater preferred; Kamloops backup",status:"New stop",nights:1,cost:"£180–£250"},links:[["Google route","https://www.google.com/maps/dir/Jasper,+AB/Clearwater,+BC"],["Wells Gray","https://bcparks.ca/wells-gray-park/"]]},
+ {day:14,date:"Fri 31 Jul",title:"Clearwater to Kelowna",base:"Kelowna / Okanagan",weather:"14–29°C",time:"4–4.5 hrs",miles:205,km:330,origin:"Clearwater, BC",dest:"Kelowna, BC",img:"https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1800&q=80",summary:"Arrive in lake country for pool/lake reset.",targets:["Okanagan Lake","Kelowna waterfront","Pool time"],hotel:{name:"TBC",preferred:"Manteo Resort / Delta Grand / lakefront apartment",area:"Lakefront / pool resort",status:"Shortlist",nights:2,cost:"£700–£900"},links:[["Tourism Kelowna","https://www.tourismkelowna.com/"],["Kelowna stays","https://www.booking.com/city/ca/kelowna.html"]]},
+ {day:15,date:"Sat 1 Aug",title:"Okanagan recovery day",base:"Kelowna / Okanagan",weather:"14–29°C",time:"Local day",img:"https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1800&q=80",summary:"Lake, beach, optional winery lunch, relaxed evening.",targets:["Okanagan Lake","Mission Creek","Winery lunch"],hotel:{name:"Same Kelowna base",preferred:"",area:"Kelowna",status:"Shortlist",nights:"",cost:""},links:[["Beaches & parks","https://www.tourismkelowna.com/things-to-do/beaches-parks/"]]},
+ {day:16,date:"Sun 2 Aug",title:"Kelowna to Vancouver",base:"Vancouver / airport",weather:"14–23°C",time:"4–5 hrs",miles:242,km:390,origin:"Kelowna, BC",dest:"Vancouver, BC",img:"https://images.unsplash.com/photo-1559511260-66a654ae982a?auto=format&fit=crop&w=1800&q=80",summary:"Return to Vancouver, final dinner, pack/reset.",targets:["Vancouver final night","Airport hotel","Pack and reset"],hotel:{name:"TBC",preferred:"Fairmont Vancouver Airport / Marriott / Hampton",area:"Airport hotel if early flight",status:"Flight dependent",nights:1,cost:"£180–£300"},links:[["YVR airport","https://www.yvr.ca/"],["Airport hotels","https://www.booking.com/airport/ca/yvr.html"]]},
+ {day:17,date:"Mon 3 Aug",title:"Fly home",base:"In flight / home",weather:"14–23°C",time:"Flight day",img:"https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1800&q=80",summary:"Return car if needed and fly Vancouver to UK.",targets:["YVR","Duty free","Sleep"],hotel:{name:"Home",preferred:"",area:"",status:"",nights:"",cost:""},links:[["Flights","https://www.google.com/travel/flights"],["YVR departures","https://www.yvr.ca/en/passengers/flights/departing-flights"]]}
+];
+
+function statusClass(status) {
+ const s=(status||"").toLowerCase();
+ if(s.includes("priority")) return "priority";
+ if(s.includes("booked")) return "booked";
+ if(s.includes("optional") || s.includes("transit")) return "optional";
+ return "shortlist";
+}
 function mapsUrl(d){ return d.origin ? `https://www.google.com/maps/dir/${encodeURIComponent(d.origin)}/${encodeURIComponent(d.dest)}` : ""; }
 function embedUrl(d){ return d.origin && GOOGLE_MAPS_API_KEY ? `https://www.google.com/maps/embed/v1/directions?key=${GOOGLE_MAPS_API_KEY}&origin=${encodeURIComponent(d.origin)}&destination=${encodeURIComponent(d.dest)}&mode=driving` : ""; }
+function wholeTripUrl() {
+ const base = "https://www.google.com/maps/dir/";
+ const parts = ["Vancouver, BC","Seattle, WA","Whistler, BC","Revelstoke, BC","Canmore, AB","Jasper, AB","Clearwater, BC","Kelowna, BC","Vancouver, BC"];
+ return base + parts.map(encodeURIComponent).join("/");
+}
+function wholeTripEmbed() {
+ return `https://www.google.com/maps/embed/v1/directions?key=${GOOGLE_MAPS_API_KEY}&origin=${encodeURIComponent("Vancouver, BC")}&destination=${encodeURIComponent("Vancouver, BC")}&waypoints=${encodeURIComponent("Seattle, WA|Whistler, BC|Revelstoke, BC|Canmore, AB|Jasper, AB|Clearwater, BC|Kelowna, BC")}&mode=driving`;
+}
 
-function render(){
- const root = document.getElementById("itinerary");
+function renderTabs(){
+ document.querySelectorAll(".tab-btn").forEach(btn => {
+   btn.addEventListener("click", () => {
+     document.querySelectorAll(".tab-btn").forEach(b=>b.classList.remove("active"));
+     document.querySelectorAll(".tab").forEach(t=>t.classList.remove("active"));
+     btn.classList.add("active");
+     document.getElementById(btn.dataset.tab).classList.add("active");
+   });
+ });
+}
+
+function renderOverview(){
+ document.getElementById("routeStrip").innerHTML = stops.map((s,i)=>`<div class="stop"><i>${i+1}</i>${s}</div>`).join("");
+ document.getElementById("quickTasks").innerHTML = tasks.slice(0,4).map(t=>`<div class="task"><b>${t.title}</b><span>${t.detail}</span></div>`).join("");
+}
+
+function renderWholeMap(){
+ document.getElementById("wholeTripMap").src = wholeTripEmbed();
+ document.getElementById("wholeTripGoogleLink").href = wholeTripUrl();
+}
+
+function renderDays(){
+ const root=document.getElementById("dayCards");
  root.innerHTML = days.map(d => {
-   const targets = d.targets.map(t=>`<span>${t}</span>`).join("");
-   const links = d.links.map(([label,url])=>`<a href="${url}" target="_blank" rel="noreferrer">${label}</a>`).join("");
-   const route = d.origin ? `<div class="route-info"><div class="drive-stat"><b>${d.miles} miles / ${d.km} km</b><small>${d.time}</small></div>${embedUrl(d) ? `<iframe class="map-frame" src="${embedUrl(d)}" loading="lazy" allowfullscreen></iframe>` : `<a class="mini-map" href="${mapsUrl(d)}" target="_blank" rel="noreferrer"><div class="map-frame" style="display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;font-weight:900;color:#1b3a57">Open proper Google route map ↗</div><span>Open full Google route ↗</span></a>`}</div>` : "";
-   return `<article class="day-card">
-    <div class="photo" style="background-image:linear-gradient(90deg,rgba(15,23,42,.82),rgba(15,23,42,.28)),url('${d.img}')">
-      <div class="day-number">Day ${d.day}</div><div><p>${d.date} · ${d.base}</p><h3>${d.title}</h3>
-      <div class="chips"><span>📍 ${d.base}</span><span>🌡️ ${d.weather}</span><span>🕒 ${d.time}</span></div></div>
-    </div>
-    <div class="day-body"><div><p class="summary">${d.summary}</p><h4>Visit targets</h4><div class="targets">${targets}</div>
-      <div class="hotel-box"><h4>Accommodation</h4><p><b>${d.hotel.name}</b><br>${d.hotel.area}</p><p><small>Confirmation, address, check-in, parking and cost can be added once booked.</small></p></div>
-      <h4>Planning links</h4><div class="links">${links}</div></div>${route}</div>
-   </article>`;
+  const targets = d.targets.map(t=>`<span>${t}</span>`).join("");
+  const links = d.links.map(([label,url])=>`<a href="${url}" target="_blank" rel="noreferrer">${label}</a>`).join("");
+  const route = d.origin ? `<div class="route-info"><div class="drive-stat"><b>${d.miles} miles / ${d.km} km</b><small>${d.time}</small></div><iframe class="map-frame" src="${embedUrl(d)}" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe><a class="pill-link" style="margin-top:10px" href="${mapsUrl(d)}" target="_blank" rel="noreferrer">Open full Google route ↗</a></div>` : "";
+  return `<article class="day-card">
+   <div class="photo" style="background-image:linear-gradient(90deg,rgba(15,23,42,.82),rgba(15,23,42,.28)),url('${d.img}')">
+     <div class="day-number">Day ${d.day}</div><div><p>${d.date} · ${d.base}</p><h3>${d.title}</h3><div class="chips"><span>📍 ${d.base}</span><span>🌡️ ${d.weather}</span><span>🕒 ${d.time}</span></div></div>
+   </div>
+   <div class="day-body"><div><p class="summary">${d.summary}</p><h4>Visit targets</h4><div class="targets">${targets}</div>
+     <div class="hotel-box"><h4>Accommodation</h4><p><b>${d.hotel.name}</b><br>${d.hotel.preferred || d.hotel.area}</p><p><span class="status ${statusClass(d.hotel.status)}">${d.hotel.status || "TBC"}</span> ${d.hotel.cost ? " · " + d.hotel.cost : ""}</p></div>
+     <h4>Planning links</h4><div class="links">${links}</div></div>${route}</div>
+  </article>`;
  }).join("");
 }
-render();
+
+function renderBookings(){
+ const rows = days.filter(d=>d.hotel && d.hotel.nights).map(d=>`<tr>
+  <td>${d.base}</td><td>${d.hotel.preferred}</td><td><span class="status ${statusClass(d.hotel.status)}">${d.hotel.status}</span></td><td>${d.hotel.nights}</td><td>${d.hotel.cost}</td><td>${d.hotel.name}</td>
+ </tr>`).join("");
+ document.getElementById("bookingsTable").innerHTML = `<thead><tr><th>Stop</th><th>Preferred / backup</th><th>Status</th><th>Nights</th><th>Target</th><th>Confirmed booking</th></tr></thead><tbody>${rows}</tbody>`;
+}
+
+function renderBudget(){
+ const planned = budget.reduce((a,b)=>a+b.planned,0);
+ const booked = budget.reduce((a,b)=>a+b.booked,0);
+ document.getElementById("budgetMidpoint").textContent = `£${(planned/1000).toFixed(1)}k`;
+ document.getElementById("budgetRows").innerHTML = budget.map(b=>`<div class="budget-row"><b>${b.item}</b><strong>£${b.planned.toLocaleString()}</strong><small>${b.range} · Booked: £${b.booked.toLocaleString()} · ${b.note}</small></div>`).join("");
+}
+
+function renderTasks(){
+ document.getElementById("taskBoard").innerHTML = tasks.map(t=>`<div class="task"><b>${t.title}</b><span class="status ${statusClass(t.status)}">${t.status}</span><p>${t.detail}</p></div>`).join("");
+}
+
+renderTabs(); renderOverview(); renderWholeMap(); renderDays(); renderBookings(); renderBudget(); renderTasks();
 </script>
 </body>
 </html>

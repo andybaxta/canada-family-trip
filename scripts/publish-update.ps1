@@ -1,3 +1,3 @@
 git add .
-git commit -m "Update trip app"
+git commit -m "Add route bookings and budget tabs"
 git push
